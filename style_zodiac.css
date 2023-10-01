@@ -1,0 +1,150 @@
+
+body {
+    height:100vh;
+
+    overflow:hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* background:linear-gradient(45deg,#061de3,#e306ca); */
+    background:linear-gradient(45deg,black,hotpink);
+    font-family:Helvetica,sans-serif;
+    background-image: url('zodiac_bg.jpg');
+    backdrop-filter:blur(1px);
+}
+
+.container{
+
+    width:293px;
+    height: 494px;
+    
+    perspective: 1000px;
+    
+    
+}
+
+.card-inner {
+    box-shadow:0px 0px 15px grey;
+    border:2px solid whitesmoke;
+    border-radius:25px;
+    width: 100%;
+    height: 100%;
+    
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card-front {
+    font-size: 24px;
+    background-color: red;
+    border-radius:25px;
+    
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    backface-visibility: hidden;
+    /* overflow:hidden; */
+
+    
+    background-image: url('tarotcard.png'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* This will make the image cover the entire container */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    
+    text-decoration: underline 3px solid rgb(211,211,211);
+}
+
+.card-back {
+    background-image: url('tarot_back.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* This will make the image cover the entire container */
+    
+    border-radius:25px;
+    font-size: 24px;
+    color:whitesmoke;
+    background-color: #0099cc;
+   
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    backface-visibility: hidden;
+
+    transform: rotateY(180deg);
+}
+
+#image{
+    z-index:-2 ;
+    height:100%;
+    width:100%;
+}
+
+.front{
+    background-color:rgba(0, 0, 0, 0.3);
+    color:rgb(211,211,211);
+    font-family: Helvetica, sans-serif;
+
+    margin-left: 10%;
+
+}
+
+#flip-button{
+    margin:80px;
+    border: 2px solid gold;
+    /* box-shadow:5px 5px 0px goldenrod; */
+    font-size: 14px;
+    font-family: helvetica;
+    font-weight:800;
+    transition: box-shadow 0.3s ease;
+
+}
+#flip-button:hover{
+    margin:80px;
+    border: 2px solid gold;
+    box-shadow:5px 5px 0px goldenrod;
+    font-size: 14px;
+    font-family: helvetica;
+    font-weight:800;
+
+}
+
+.input-fields{
+  width: 70%; /* Make the input box fill the container width */
+  padding: 5px; /* Add padding for spacing inside the input box */
+  border: 2px solid gold;
+  box-shadow:5px 5px 0px goldenrod;
+  border-radius: 4px; /* Add rounded corners for aesthetics */
+  font-size: 14px;
+  font-family: helvetica;
+  font-weight:800;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    border: 2px solid white; /* Set the desired outline color */
+    border-radius: 4px; /* Add rounded corners for a better look */
+}
+
+
+#newentry{
+    margin:80px;
+    border: 2px solid gold;
+    /* box-shadow:5px 5px 0px goldenrod; */
+    font-size: 14px;
+    font-family: helvetica;
+    font-weight:800;
+    transition: box-shadow 0.3s ease;
+
+}
+#newentry:hover{
+    margin:80px;
+    border: 2px solid gold;
+    box-shadow:5px 5px 0px goldenrod;
+    font-size: 14px;
+    font-family: helvetica;
+    font-weight:800;
+
+}
